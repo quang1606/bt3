@@ -2,6 +2,8 @@ const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");   
 const btn3 = document.querySelector(".btn3");
 const ull = document.createElement("ul");
+const h1 =document.createElement("h1");
+document.body.prepend(h1)
 document.body.appendChild(ull); 
 async function getdata(apiUrl, btnClicked) {
     try {
@@ -12,7 +14,7 @@ async function getdata(apiUrl, btnClicked) {
 
      
         btnClicked.classList.add("a");
-
+        h1.innerHTML = `Type : ${btnClicked.innerHTML}`;
     } catch (error) {
         console.log(error);
     }
